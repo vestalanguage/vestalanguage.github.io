@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ورود زبان‌آموزان به پنل کاربری وستا">
+<title>ورود زبان‌آموز | وستا</title>
+<link rel="icon" type="image/webp" href="images/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html">
+      <img src="images/vesta-logo.webp" alt="نشان آموزشگاه وستا">
+      <span class="brand-text">
+        <strong>وستا</strong>
+        <small>ENGLISH LANGUAGE INSTITUTE</small>
+      </span>
+    </a>
+    <nav class="primary" id="primaryNav">
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره ما</a>
+      <a href="courses.html">دوره‌ها</a>
+      <a href="tools.html">ابزارهای آموزشی</a>
+      <a href="contact.html">تماس با ما</a>
+      <a href="login.html" class="btn btn-line current">ورود زبان‌آموز</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="باز کردن منو" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <div class="login-shell">
+    <div class="login-card">
+      <img src="images/vesta-logo.webp" alt="وستا">
+      <h2>ورود زبان‌آموز</h2>
+      <p class="sub">برای مشاهده وضعیت دوره و فایل‌های آموزشی وارد شوید</p>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="l-phone">شماره موبایل</label>
+          <input type="tel" id="l-phone" name="phone" placeholder="09xxxxxxxxx" required>
+        </div>
+        <div class="field">
+          <label for="l-pass">رمز عبور</label>
+          <input type="password" id="l-pass" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-fill">ورود به پنل</button>
+      </form>
+
+      <div class="divider-or">یا</div>
+      <a href="contact.html#register" class="btn btn-line" style="width:100%">هنوز ثبت‌نام نکرده‌ام</a>
+
+      <p class="login-alt">رمز عبور را فراموش کرده‌اید؟ <a href="contact.html">تماس با پشتیبانی</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="images/vesta-logo.webp" alt="وستا">
+        <strong>وستا</strong>
+      </div>
+      <p>آموزشگاه زبان انگلیسی وستا؛ آموزش با کیفیت، اساتید مجرب و منابع آموزشی به‌روز.</p>
+    </div>
+    <div>
+      <h4>دسترسی سریع</h4>
+      <ul>
+        <li><a href="courses.html">دوره‌های آموزشی</a></li>
+        <li><a href="tools.html">ابزارهای آموزشی</a></li>
+        <li><a href="about.html">درباره ما</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>حساب کاربری</h4>
+      <ul>
+        <li><a href="login.html">ورود زبان‌آموز</a></li>
+        <li><a href="contact.html#register">ثبت‌نام دوره</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ارتباط با ما</h4>
+      <ul>
+        <li><a href="tel:+982100000000">۰۲۱-۰۰۰۰۰۰۰</a></li>
+        <li><a href="mailto:info@vesta-institute.com">info@vesta-institute.com</a></li>
+        <li><a href="contact.html">آدرس و نقشه</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">© وستا — آموزشگاه زبان انگلیسی. تمامی حقوق محفوظ است.</div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burgerBtn');
+  const nav = document.getElementById('primaryNav');
+  burger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+  document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('پنل زبان‌آموز هنوز راه‌اندازی نشده است. این صفحه فعلاً نمایشی است.');
+  });
+</script>
+
+</body>
+</html>
