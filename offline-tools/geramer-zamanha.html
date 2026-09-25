@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>گرامر: زمان‌های افعال | وستا</title>
+<style>
+  :root{
+    --red:#d71920; --red-deep:#a10d14; --ink:#161513; --ink-soft:#3a3835;
+    --paper:#fffdfa; --sand:#f6f2ea; --line:#e7e1d4; --gold:#e8a93a;
+    --green:#2f8f4e; --green-bg:#e7f5eb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Tahoma,'Vazirmatn',Arial,sans-serif;
+    background:var(--paper);color:var(--ink);line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{background:var(--ink);color:#fff;padding:26px 0;border-bottom:4px solid var(--red)}
+  header .wrap{display:flex;align-items:center;gap:14px}
+  header .badge{
+    width:44px;height:44px;border-radius:50%;background:var(--red);
+    display:flex;align-items:center;justify-content:center;font-weight:800;
+    font-size:15px;flex-shrink:0;
+  }
+  header h1{font-size:19px;margin-bottom:3px}
+  header p{font-size:12.5px;color:#cfccc4}
+  .offline-note{
+    background:var(--sand);border-bottom:1px solid var(--line);
+    padding:12px 0;font-size:12.5px;color:var(--ink-soft);text-align:center;
+  }
+  main{padding:30px 0 70px}
+  .intro{
+    background:var(--sand);border:1px solid var(--line);border-radius:12px;
+    padding:20px;margin-bottom:26px;font-size:14px;color:var(--ink-soft);
+  }
+  .intro strong{color:var(--ink);display:block;margin-bottom:6px;font-size:15px}
+  .controls-bar{
+    display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap;
+    align-items:center;justify-content:space-between;
+    background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 16px;
+  }
+  .controls-bar label{font-size:13px;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+  .controls-bar select{
+    padding:6px 10px;border:1.5px solid var(--line);border-radius:6px;
+    font-family:inherit;font-size:13px;background:#fff;
+  }
+  .speed-btns{display:flex;gap:4px}
+  .speed-btn{
+    padding:5px 10px;border:1.5px solid var(--line);border-radius:6px;
+    background:#fff;font-size:12px;cursor:pointer;font-family:inherit;
+  }
+  .speed-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  .section-title{
+    font-size:18px;font-weight:800;margin:36px 0 6px;
+  }
+  .section-title:first-child{margin-top:0}
+  .section-sub{font-size:13.5px;color:var(--ink-soft);margin-bottom:16px}
+
+  .rule-box{
+    background:var(--sand);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px;margin-bottom:18px;font-size:14px;
+  }
+  .rule-box .formula{
+    font-family:Georgia,serif;direction:ltr;text-align:left;
+    font-weight:700;color:var(--red-deep);margin-bottom:6px;font-size:15px;
+  }
+
+  .phrase-card{
+    border:1px solid var(--line);border-radius:12px;margin-bottom:14px;
+    overflow:hidden;background:var(--paper);
+  }
+  .phrase-num{
+    display:inline-block;font-size:11px;font-weight:700;color:var(--red-deep);
+    background:#fbe4e2;padding:2px 9px;border-radius:20px;margin-bottom:10px;
+  }
+  .phrase-body{padding:18px 20px}
+  .phrase-en{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:20px;font-weight:600;color:var(--ink);margin-bottom:8px;
+    direction:ltr;text-align:left;
+  }
+  .phrase-fa{font-size:14.5px;color:var(--ink-soft)}
+  .phrase-actions{
+    display:flex;align-items:center;gap:10px;padding:12px 20px;
+    background:var(--sand);border-top:1px solid var(--line);
+  }
+  .play-btn{
+    display:flex;align-items:center;gap:8px;background:var(--red);color:#fff;
+    border:none;border-radius:8px;padding:9px 18px;font-family:inherit;
+    font-size:13.5px;font-weight:700;cursor:pointer;transition:.15s;
+  }
+  .play-btn:hover{background:var(--red-deep)}
+  .play-btn:disabled{background:#b9b6ae;cursor:default}
+  .play-btn .icon{font-size:15px}
+  .status-text{font-size:12px;color:var(--ink-soft)}
+
+  /* Quiz */
+  .quiz-box{
+    border:2px solid var(--ink);border-radius:12px;padding:22px;margin-bottom:16px;
+  }
+  .quiz-q{font-size:15px;font-weight:700;margin-bottom:14px}
+  .quiz-q .en-part{
+    font-family:Georgia,serif;direction:ltr;display:inline-block;
+    color:var(--red-deep);font-weight:700;
+  }
+  .quiz-opts{display:grid;gap:8px}
+  .quiz-opt{
+    padding:11px 16px;border:1.5px solid var(--line);border-radius:8px;
+    background:var(--paper);cursor:pointer;font-family:inherit;font-size:14px;
+    text-align:right;transition:.15s;
+    direction:ltr;text-align:left;
+  }
+  .quiz-opt:hover{border-color:var(--red)}
+  .quiz-opt.correct{background:var(--green-bg);border-color:var(--green);color:var(--green)}
+  .quiz-opt.wrong{background:#fdeaea;border-color:var(--red);color:var(--red-deep)}
+  .quiz-feedback{font-size:13px;margin-top:12px;font-weight:700;display:none}
+  .quiz-score{
+    text-align:center;padding:18px;background:var(--sand);border-radius:10px;
+    font-size:15px;font-weight:700;margin-top:10px;
+  }
+
+  footer{background:var(--ink);color:#cfccc4;text-align:center;padding:22px 20px;font-size:12px}
+  .no-support{
+    display:none;background:#fff3cd;border:1px solid #ffe3a3;color:#7a5c00;
+    padding:14px 18px;border-radius:10px;margin-bottom:20px;font-size:13.5px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="badge">VE</div>
+    <div>
+      <h1>گرامر: زمان‌های افعال</h1>
+      <p>آموزشگاه زبان انگلیسی وستا · فایل آموزشی آفلاین</p>
+    </div>
+  </div>
+</header>
+
+<div class="offline-note">📴 این فایل کاملاً آفلاین کار می‌کند — نیازی به اتصال اینترنت ندارید</div>
+
+<main>
+  <div class="wrap">
+    <div class="no-support" id="noSupport">
+      مرورگر شما از پخش صدا پشتیبانی نمی‌کند. متن را می‌توانید مطالعه کنید، اما دکمه پخش صدا کار نخواهد کرد.
+    </div>
+
+    <div class="intro">
+      <strong>راهنمای استفاده</strong>
+      خلاصه‌ای کاربردی از زمان‌های حال، گذشته و آینده در انگلیسی، همراه با مثال صوتی و یک تمرین تعاملی برای سنجش یادگیری شما.
+    </div>
+
+    <div class="controls-bar">
+      <label>
+        سرعت پخش:
+        <span class="speed-btns">
+          <button class="speed-btn" data-rate="0.7">آهسته</button>
+          <button class="speed-btn active" data-rate="1">عادی</button>
+          <button class="speed-btn" data-rate="1.3">سریع</button>
+        </span>
+      </label>
+      <label>
+        صدا:
+        <select id="voiceSelect"></select>
+      </label>
+    </div>
+
+    <div class="section-title">۱. زمان حال ساده</div>
+    <div class="section-sub">برای کارهای همیشگی، عادت‌ها و حقیقت‌های ثابت.</div>
+    <div class="rule-box">
+      <div class="formula">Subject + Verb (+s/es for he/she/it)</div>
+      از این زمان برای بیان عادت روزمره یا حقیقت علمی استفاده می‌شود.
+    </div>
+    <div id="list-present"></div>
+
+    <div class="section-title">۲. زمان گذشته ساده</div>
+    <div class="section-sub">برای کاری که در گذشته تمام شده است.</div>
+    <div class="rule-box">
+      <div class="formula">Subject + Verb (past form)</div>
+      اکثر افعال با اضافه‌کردن «ed» به شکل گذشته تبدیل می‌شوند؛ افعال بی‌قاعده شکل جداگانه دارند.
+    </div>
+    <div id="list-past"></div>
+
+    <div class="section-title">۳. زمان آینده ساده</div>
+    <div class="section-sub">برای کاری که قرار است در آینده انجام شود.</div>
+    <div class="rule-box">
+      <div class="formula">Subject + will + Verb</div>
+      برای تصمیم لحظه‌ای، پیش‌بینی یا وعده از این ساختار استفاده می‌شود.
+    </div>
+    <div id="list-future"></div>
+
+    <div class="section-title">تمرین تعاملی</div>
+    <div class="section-sub">زمان صحیح فعل را در هر جمله انتخاب کنید.</div>
+    <div id="quizContainer"></div>
+    <div class="quiz-score" id="quizScore" style="display:none"></div>
+
+  </div>
+</main>
+
+<footer>
+  آموزشگاه زبان انگلیسی وستا — فارس، داراب، بلوار مطهری<br>
+  ۰۹۱۹-۳۱۹۱۷۵۰ · info@vesta-institute.com
+</footer>
+
+<script>
+  const presentItems = [
+    { en: "I go to school every day.", fa: "من هر روز به مدرسه می‌رم." },
+    { en: "She works in a hospital.", fa: "او تو یه بیمارستان کار می‌کنه." },
+    { en: "Water boils at 100 degrees.", fa: "آب در ۱۰۰ درجه می‌جوشه." },
+  ];
+  const pastItems = [
+    { en: "I visited my grandmother yesterday.", fa: "دیروز به مادربزرگم سر زدم." },
+    { en: "She finished her homework.", fa: "او تکالیفش رو تموم کرد." },
+    { en: "They went to Paris last year.", fa: "اونا پارسال به پاریس رفتن." },
+  ];
+  const futureItems = [
+    { en: "I will call you tomorrow.", fa: "فردا بهت زنگ می‌زنم." },
+    { en: "She will start a new job next week.", fa: "اون هفته‌ی بعد یه شغل جدید شروع می‌کنه." },
+    { en: "It will rain this weekend.", fa: "این آخر هفته بارون میاد." },
+  ];
+
+  function toFa(n){
+    const digits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    return String(n).split('').map(d => digits[d]).join('');
+  }
+
+  function renderList(containerId, items, startNum){
+    const el = document.getElementById(containerId);
+    items.forEach((p, i) => {
+      const card = document.createElement('div');
+      card.className = 'phrase-card';
+      card.innerHTML = `
+        <div class="phrase-body">
+          <span class="phrase-num">مثال ${toFa(startNum + i)}</span>
+          <div class="phrase-en">${p.en}</div>
+          <div class="phrase-fa">${p.fa}</div>
+        </div>
+        <div class="phrase-actions">
+          <button class="play-btn" data-text="${p.en.replace(/"/g,'&quot;')}">
+            <span class="icon">🔊</span> پخش صدا
+          </button>
+          <span class="status-text"></span>
+        </div>
+      `;
+      el.appendChild(card);
+    });
+  }
+  renderList('list-present', presentItems, 1);
+  renderList('list-past', pastItems, 1);
+  renderList('list-future', futureItems, 1);
+
+  // ---------- Quiz ----------
+  const quizData = [
+    {
+      q: 'Every morning, she <span class="en-part">______</span> coffee.',
+      qFa: "هر روز صبح، او قهوه ______.",
+      options: ["drink", "drinks", "will drink"],
+      correct: 1
+    },
+    {
+      q: 'Yesterday, we <span class="en-part">______</span> a movie.',
+      qFa: "دیروز، ما یک فیلم ______.",
+      options: ["watch", "watched", "will watch"],
+      correct: 1
+    },
+    {
+      q: 'Next year, I <span class="en-part">______</span> to Canada.',
+      qFa: "سال آینده، من به کانادا ______.",
+      options: ["move", "moved", "will move"],
+      correct: 2
+    },
+    {
+      q: 'The sun <span class="en-part">______</span> in the east.',
+      qFa: "خورشید از شرق ______.",
+      options: ["rises", "rose", "will rise"],
+      correct: 0
+    },
+    {
+      q: 'They <span class="en-part">______</span> their homework last night.',
+      qFa: "اونا دیشب تکالیفشون رو ______.",
+      options: ["finish", "finished", "will finish"],
+      correct: 1
+    }
+  ];
+
+  let score = 0;
+  let answered = 0;
+  const quizContainer = document.getElementById('quizContainer');
+
+  quizData.forEach((item, qIndex) => {
+    const box = document.createElement('div');
+    box.className = 'quiz-box';
+    box.innerHTML = `
+      <div class="quiz-q">${toFa(qIndex+1)}. ${item.q}<br><span style="font-weight:400;font-size:13px;color:var(--ink-soft)">${item.qFa}</span></div>
+      <div class="quiz-opts">
+        ${item.options.map((opt, i) => `<button class="quiz-opt" data-i="${i}">${opt}</button>`).join('')}
+      </div>
+      <div class="quiz-feedback"></div>
+    `;
+    quizContainer.appendChild(box);
+
+    const opts = box.querySelectorAll('.quiz-opt');
+    const feedback = box.querySelector('.quiz-feedback');
+    let thisAnswered = false;
+
+    opts.forEach(opt => {
+      opt.addEventListener('click', () => {
+        if(thisAnswered) return;
+        thisAnswered = true;
+        answered++;
+        const chosen = parseInt(opt.dataset.i);
+        if(chosen === item.correct){
+          opt.classList.add('correct');
+          score++;
+          feedback.textContent = '✓ درست است';
+          feedback.style.color = 'var(--green)';
+        } else {
+          opt.classList.add('wrong');
+          opts[item.correct].classList.add('correct');
+          feedback.textContent = '✗ نادرست — پاسخ صحیح مشخص شد';
+          feedback.style.color = 'var(--red-deep)';
+        }
+        feedback.style.display = 'block';
+
+        if(answered === quizData.length){
+          const scoreEl = document.getElementById('quizScore');
+          scoreEl.style.display = 'block';
+          scoreEl.textContent = `نتیجه شما: ${toFa(score)} از ${toFa(quizData.length)} پاسخ صحیح`;
+        }
+      });
+    });
+  });
+
+  // ---------- Web Speech API ----------
+  let currentRate = 1;
+  let voices = [];
+  const voiceSelect = document.getElementById('voiceSelect');
+
+  function loadVoices(){
+    voices = speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+    voiceSelect.innerHTML = '';
+    if(voices.length === 0){
+      const opt = document.createElement('option');
+      opt.textContent = 'پیش‌فرض دستگاه';
+      voiceSelect.appendChild(opt);
+      return;
+    }
+    voices.forEach((v, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = v.name + ' (' + v.lang + ')';
+      voiceSelect.appendChild(opt);
+    });
+  }
+
+  if('speechSynthesis' in window){
+    loadVoices();
+    speechSynthesis.onvoiceschanged = loadVoices;
+  } else {
+    document.getElementById('noSupport').style.display = 'block';
+  }
+
+  document.querySelectorAll('.speed-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentRate = parseFloat(btn.dataset.rate);
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.play-btn');
+    if(!btn) return;
+    if(!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const text = btn.dataset.text;
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'en-US';
+    utter.rate = currentRate;
+    const selectedVoice = voices[voiceSelect.value];
+    if(selectedVoice) utter.voice = selectedVoice;
+
+    const statusEl = btn.nextElementSibling;
+    btn.disabled = true;
+    statusEl.textContent = 'در حال پخش...';
+
+    utter.onend = () => { btn.disabled = false; statusEl.textContent = ''; };
+    utter.onerror = () => { btn.disabled = false; statusEl.textContent = 'خطا در پخش صدا'; };
+    speechSynthesis.speak(utter);
+  });
+</script>
+
+</body>
+</html>
