@@ -118,25 +118,25 @@
 
         <form class="reg-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="abaad6f1-920e-4f1c-b918-3462f8ee705f">
-          <input type="hidden" name="subject" value="پیام جدید از فرم تماس — سایت وستا">
-          <input type="hidden" name="from_name" value="فرم تماس وستا">
+          <input type="hidden" name="subject" value="New contact message - Vesta website">
+          <input type="hidden" name="from_name" value="Vesta contact form">
           <div class="field">
             <label for="c-name" data-i18n="k94">نام و نام‌خانوادگی</label>
-            <input type="text" id="c-name" name="نام و نام‌خانوادگی" required>
+            <input type="text" id="c-name" name="name" required>
           </div>
           <div class="field-row">
             <div class="field">
               <label for="c-phone" data-i18n="k95">شماره تماس</label>
-              <input type="tel" id="c-phone" name="شماره تماس" required>
+              <input type="tel" id="c-phone" name="phone" required>
             </div>
             <div class="field">
               <label for="c-email" data-i18n="k96">ایمیل</label>
-              <input type="email" id="c-email" name="ایمیل">
+              <input type="email" id="c-email" name="email">
             </div>
           </div>
           <div class="field">
             <label for="c-subject" data-i18n="k263">موضوع پیام</label>
-            <select id="c-subject" name="موضوع پیام">
+            <select id="c-subject" name="topic">
               <option data-i18n="k264">سوال درباره دوره‌ها</option>
               <option data-i18n="k265">ثبت‌نام و تعیین سطح</option>
               <option data-i18n="k266">همکاری با وستا</option>
@@ -145,7 +145,7 @@
           </div>
           <div class="field">
             <label for="c-message" data-i18n="k268">پیام شما</label>
-            <input type="text" id="c-message" name="پیام" placeholder="توضیح مختصر درخواست خود را بنویسید" data-i18n-attr="placeholder:k250">
+            <input type="text" id="c-message" name="message" placeholder="توضیح مختصر درخواست خود را بنویسید" data-i18n-attr="placeholder:k250">
           </div>
           <button type="submit" class="btn btn-fill" data-i18n="k269">ارسال پیام</button>
           <p class="form-note" data-i18n="k270">پاسخ به پیام شما حداکثر ظرف ۲۴ ساعت کاری ارسال می‌شود.</p>
@@ -170,25 +170,25 @@
 
         <form class="reg-form" id="registerForm" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="abaad6f1-920e-4f1c-b918-3462f8ee705f">
-          <input type="hidden" name="subject" value="ثبت‌نام دوره جدید — سایت وستا">
-          <input type="hidden" name="from_name" value="فرم ثبت‌نام وستا">
+          <input type="hidden" name="subject" value="New course registration - Vesta website">
+          <input type="hidden" name="from_name" value="Vesta registration form">
           <div class="field">
             <label for="fullname" data-i18n="k94">نام و نام‌خانوادگی</label>
-            <input type="text" id="fullname" name="نام و نام‌خانوادگی" required>
+            <input type="text" id="fullname" name="name" required>
           </div>
           <div class="field-row">
             <div class="field">
               <label for="phone" data-i18n="k95">شماره تماس</label>
-              <input type="tel" id="phone" name="شماره تماس" required>
+              <input type="tel" id="phone" name="phone" required>
             </div>
             <div class="field">
               <label for="email" data-i18n="k96">ایمیل</label>
-              <input type="email" id="email" name="ایمیل">
+              <input type="email" id="email" name="email">
             </div>
           </div>
           <div class="field">
             <label for="course" data-i18n="k97">دوره مورد نظر</label>
-            <select id="course" name="دوره مورد نظر">
+            <select id="course" name="course">
               <option data-i18n="k98">Foundation A1 — مقدماتی</option>
               <option data-i18n="k271">Foundation A2 — مقدماتی</option>
               <option data-i18n="k272">Intermediate B1 — متوسط</option>
