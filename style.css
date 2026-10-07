@@ -423,3 +423,116 @@
     .team-grid{grid-template-columns:1fr 1fr}
     .tool-grid{grid-template-columns:1fr}
   }
+
+/* ====================================================================
+   v2 additions — language switcher, teacher profiles, LTR support
+   ==================================================================== */
+[hidden]{display:none !important}
+
+/* ---- language switcher ---- */
+.nav-tools{display:flex;align-items:center;gap:10px}
+.lang-switch{
+  display:inline-flex;border:2px solid var(--ink);border-radius:30px;
+  overflow:hidden;background:var(--paper);
+}
+.lang-switch button{
+  font-family:inherit;font-size:13px;font-weight:700;line-height:1.5;
+  padding:5px 14px;border:none;background:transparent;color:var(--ink);
+  cursor:pointer;transition:background .15s,color .15s;
+}
+.lang-switch button:hover{background:var(--sand)}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:#fff}
+
+/* ---- avatars (initials fallback; photo overlays when the file exists) ---- */
+.avatar{
+  position:relative;display:grid;place-items:center;flex-shrink:0;overflow:hidden;
+  background:var(--sand);border:2px solid var(--ink);color:var(--red);font-weight:800;
+}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.avatar.lg{width:200px;aspect-ratio:4/5;border-radius:var(--radius-m);font-size:52px}
+.avatar.md{width:84px;height:84px;border-radius:50%;font-size:24px}
+.avatar.sm{width:56px;height:56px;border-radius:50%;font-size:17px}
+
+/* ---- profiles (about page) ---- */
+.profile h3{font-size:19px;font-weight:800;line-height:1.5}
+.profile-role{color:var(--red);font-weight:700;font-size:14px;margin-bottom:12px}
+.profile p{font-size:14.5px;color:var(--ink-soft);margin-bottom:10px}
+.profile h4{font-size:14px;font-weight:800;margin:18px 0 8px;color:var(--ink)}
+.quals li{
+  position:relative;padding-inline-start:18px;margin-bottom:6px;
+  font-size:14px;color:var(--ink-soft);
+}
+.quals li::before{content:'—';position:absolute;inset-inline-start:0;color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  font-size:12.5px;font-weight:600;padding:3px 12px;border-radius:20px;
+  border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);
+}
+.profile-director{
+  display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:start;
+  padding:32px;margin-bottom:26px;scroll-margin-top:110px;
+  background:var(--paper);border:2px solid var(--ink);border-radius:var(--radius-m);
+}
+.profile-director h3{font-size:25px}
+.profile-director p{font-size:15px}
+.teacher-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.teacher-card{
+  padding:26px;scroll-margin-top:110px;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+}
+.teacher-head{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.teacher-head .profile-role{margin-bottom:0}
+.profile:target{border-color:var(--red)}
+
+/* ---- home: director strip + mini team ---- */
+.director-strip{
+  display:flex;align-items:center;gap:24px;padding:24px 28px;margin-bottom:18px;
+  background:var(--paper);border:2px solid var(--ink);border-radius:var(--radius-m);
+}
+.director-strip .ds-text{flex:1}
+.director-strip h3{font-size:20px;font-weight:800}
+.director-strip .profile-role{margin-bottom:8px}
+.director-strip p{font-size:14.5px;color:var(--ink-soft)}
+.director-strip .btn{flex-shrink:0}
+.mini-team{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mini-card{
+  display:flex;align-items:center;gap:12px;padding:14px;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+  transition:border-color .15s;
+}
+.mini-card:hover{border-color:var(--red)}
+.mini-card strong{display:block;font-size:14.5px;line-height:1.5}
+.mini-card small{display:block;font-size:12px;color:var(--ink-soft);line-height:1.6}
+
+/* ---- courses: age groups + empty filter ---- */
+.who{margin-top:12px;font-size:13.5px}
+.who a{color:var(--red);font-weight:700}
+.who a:hover{text-decoration:underline}
+.empty-note{display:none;text-align:center;padding:40px 0;color:var(--ink-soft)}
+
+/* ---- English / LTR ---- */
+html[dir="ltr"] body{font-family:'Inter','Vazirmatn',Tahoma,sans-serif;line-height:1.7}
+html[dir="ltr"] .reg-wrap > *,
+html[dir="ltr"] .contact-grid > *{direction:ltr}
+html[dir="ltr"] .course-syllabus li{padding-right:0;padding-left:16px}
+html[dir="ltr"] .course-syllabus li::before{right:auto;left:0}
+html[dir="ltr"] .timeline{border-right:0;padding-right:0;border-left:2px solid var(--line);padding-left:26px}
+html[dir="ltr"] .timeline-item::before{right:auto;left:-32px}
+html[dir="ltr"] h1{line-height:1.2}
+html[dir="ltr"] h2,html[dir="ltr"] h3{line-height:1.35}
+html[dir="ltr"] .brand-text small{letter-spacing:.8px}
+html[dir="ltr"] .hero-stats{gap:26px}
+html[dir="ltr"] .hero-stats div strong{font-size:23px}
+
+@media (max-width:960px){
+  .profile-director{grid-template-columns:1fr;padding:24px}
+  .profile-director .avatar.lg{width:150px}
+  .teacher-grid{grid-template-columns:1fr}
+  .director-strip{flex-direction:column;align-items:flex-start}
+  .mini-team{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .mini-team{grid-template-columns:1fr}
+  .lang-switch button{padding:4px 11px;font-size:12.5px}
+  .teacher-card{padding:20px}
+}

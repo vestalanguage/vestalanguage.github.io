@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="دوره‌های آموزش زبان انگلیسی وستا از سطح مقدماتی تا آمادگی آزمون‌های بین‌المللی">
-<title>دوره‌های آموزشی | وستا</title>
+<meta name="description" content="دوره‌های آموزش زبان انگلیسی وستا از سطح مقدماتی تا آمادگی آزمون‌های بین‌المللی" data-i18n-attr="content:k181">
+<title data-i18n="k182">دوره‌های آموزشی | وستا</title>
 <link rel="icon" type="image/webp" href="images/favicon.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,12 +16,12 @@
 <div class="masthead">
   <div class="wrap">
     <div class="contact-bits">
-      <a href="tel:+989193191750">📞 ۰۹۱۹-۳۱۹۱۷۵۰</a>
+      <a href="tel:+989193191750" data-i18n="k6">📞 ۰۹۱۹-۳۱۹۱۷۵۰</a>
       <a href="mailto:info@vesta-institute.com">✉️ info@vesta-institute.com</a>
     </div>
     <div class="contact-bits">
-      <a href="#">اینستاگرام</a>
-      <a href="#">تلگرام</a>
+      <a href="#" data-i18n="k7">اینستاگرام</a>
+      <a href="#" data-i18n="k8">تلگرام</a>
     </div>
   </div>
 </div>
@@ -29,29 +29,35 @@
 <header class="site">
   <div class="wrap nav-row">
     <a class="brand" href="index.html">
-      <img src="images/vesta-logo.webp" alt="نشان آموزشگاه وستا">
+      <img src="images/vesta-logo.webp" alt="نشان آموزشگاه وستا" data-i18n-attr="alt:k2">
       <span class="brand-text">
-        <strong>وستا</strong>
+        <strong data-i18n="k4">وستا</strong>
         <small>ENGLISH LANGUAGE INSTITUTE</small>
       </span>
     </a>
     <nav class="primary" id="primaryNav">
-      <a href="index.html">خانه</a>
-      <a href="about.html">درباره ما</a>
-      <a href="courses.html" class="current">دوره‌ها</a>
-      <a href="tools.html">ابزارهای آموزشی</a>
-      <a href="contact.html">تماس با ما</a>
-      <a href="login.html" class="btn btn-line">ورود زبان‌آموز</a>
+      <a href="index.html" data-i18n="k9">خانه</a>
+      <a href="about.html" data-i18n="k10">درباره ما</a>
+      <a href="courses.html" class="current" data-i18n="k11">دوره‌ها</a>
+      <a href="tools.html" data-i18n="k12">ابزارهای آموزشی</a>
+      <a href="contact.html" data-i18n="k13">تماس با ما</a>
+      <a href="login.html" class="btn btn-line" data-i18n="k14">ورود زبان‌آموز</a>
     </nav>
-    <button class="burger" id="burgerBtn" aria-label="باز کردن منو" aria-expanded="false"><span></span></button>
+    <div class="nav-tools">
+      <div class="lang-switch" role="group" aria-label="Language / زبان">
+        <button type="button" data-lang="fa" lang="fa">فارسی</button>
+        <button type="button" data-lang="en" lang="en">English</button>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="باز کردن منو" aria-expanded="false" data-i18n-attr="aria-label:k3"><span></span></button>
+    </div>
   </div>
 </header>
 
 <div class="page-header">
   <div class="wrap">
-    <div class="breadcrumb"><a href="index.html">خانه</a> / دوره‌های آموزشی</div>
-    <h1>دوره‌های آموزشی وستا</h1>
-    <p>از پایه تا آمادگی آزمون‌های بین‌المللی — هر دوره با تعیین سطح رایگان شروع می‌شود.</p>
+    <div class="breadcrumb"><a href="index.html" data-i18n="k9">خانه</a> / <span data-i18n="k29">دوره‌های آموزشی</span></div>
+    <h1 data-i18n="k183">دوره‌های آموزشی وستا</h1>
+    <p data-i18n="k184">از پایه تا آمادگی آزمون‌های بین‌المللی — هر دوره با تعیین سطح رایگان شروع می‌شود.</p>
   </div>
 </div>
 
@@ -59,146 +65,177 @@
   <section>
     <div class="wrap">
       <div class="filter-row">
-        <button class="filter-chip active">همه دوره‌ها</button>
-        <button class="filter-chip">مقدماتی</button>
-        <button class="filter-chip">متوسط</button>
-        <button class="filter-chip">پیشرفته</button>
-        <button class="filter-chip">آمادگی آزمون</button>
-        <button class="filter-chip">آنلاین</button>
+        <button class="filter-chip active" data-filter="all" data-i18n="k185">همه دوره‌ها</button>
+        <button class="filter-chip" data-filter="beginner" data-i18n="k62">مقدماتی</button>
+        <button class="filter-chip" data-filter="intermediate" data-i18n="k67">متوسط</button>
+        <button class="filter-chip" data-filter="advanced" data-i18n="k186">پیشرفته</button>
+        <button class="filter-chip" data-filter="exam" data-i18n="k71">آمادگی آزمون</button>
+        <button class="filter-chip" data-filter="online" data-i18n="k187">آنلاین</button>
       </div>
 
       <div class="course-grid-full">
 
-        <div class="course-card full">
+        <div class="course-card full" data-cat="beginner">
           <div class="course-top">
-            <span class="course-level">مقدماتی</span>
-            <h3>Foundation A1</h3>
-            <p class="desc">ورود بدون پیش‌نیاز. تمرکز بر شنیدن، صحبت کردن و واژگان پرکاربرد روزمره.</p>
+            <span class="course-level" data-i18n="k62">مقدماتی</span>
+            <h3 data-i18n="k188">Foundation A1</h3>
+            <p class="desc" data-i18n="k189">ورود بدون پیش‌نیاز. تمرکز بر شنیدن، صحبت کردن و واژگان پرکاربرد روزمره.</p>
           </div>
           <ul class="course-syllabus">
-            <li>الفبای مکالمه و جمله‌سازی پایه</li>
-            <li>۳۰۰ واژه کاربردی روزمره</li>
-            <li>تمرین شنیداری با فایل صوتی هفتگی</li>
+            <li data-i18n="k190">الفبای مکالمه و جمله‌سازی پایه</li>
+            <li data-i18n="k191">۳۰۰ واژه کاربردی روزمره</li>
+            <li data-i18n="k192">تمرین شنیداری با فایل صوتی هفتگی</li>
           </ul>
-          <div class="capacity-label">۶ از ۸ ظرفیت پر شده</div>
+          <div class="capacity-label" data-i18n="k193">۶ از ۸ ظرفیت پر شده</div>
           <div class="capacity-bar"><span style="width:75%"></span></div>
           <div class="course-meta">
-            <span>مدت: <strong>۱۰ هفته</strong></span>
-            <span>شروع: <strong>۵ مهر</strong></span>
+            <span data-i18n="k194">مدت: <strong>۱۰ هفته</strong></span>
+            <span data-i18n="k195">شروع: <strong>۵ مهر</strong></span>
           </div>
-          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill">ثبت‌نام در این دوره</a></div>
+          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill" data-i18n="k196">ثبت‌نام در این دوره</a></div>
         </div>
 
-        <div class="course-card full">
+        <div class="course-card full" data-cat="beginner">
           <div class="course-top">
-            <span class="course-level">مقدماتی</span>
-            <h3>Foundation A2</h3>
-            <p class="desc">تثبیت گرامر پایه و افزایش دایره واژگان برای مکالمات ساده روزمره.</p>
+            <span class="course-level" data-i18n="k62">مقدماتی</span>
+            <h3 data-i18n="k197">Foundation A2</h3>
+            <p class="desc" data-i18n="k198">تثبیت گرامر پایه و افزایش دایره واژگان برای مکالمات ساده روزمره.</p>
           </div>
           <ul class="course-syllabus">
-            <li>زمان‌های حال و گذشته ساده</li>
-            <li>مکالمه در موقعیت‌های رایج (خرید، رستوران، سفر)</li>
-            <li>تمرین تلفظ با پخش‌کننده صوتی</li>
+            <li data-i18n="k199">زمان‌های حال و گذشته ساده</li>
+            <li data-i18n="k200">مکالمه در موقعیت‌های رایج (خرید، رستوران، سفر)</li>
+            <li data-i18n="k201">تمرین تلفظ با پخش‌کننده صوتی</li>
           </ul>
-          <div class="capacity-label">۳ از ۸ ظرفیت پر شده</div>
+          <div class="capacity-label" data-i18n="k202">۳ از ۸ ظرفیت پر شده</div>
           <div class="capacity-bar"><span style="width:38%"></span></div>
           <div class="course-meta">
-            <span>مدت: <strong>۱۰ هفته</strong></span>
-            <span>شروع: <strong>۱۲ مهر</strong></span>
+            <span data-i18n="k194">مدت: <strong>۱۰ هفته</strong></span>
+            <span data-i18n="k203">شروع: <strong>۱۲ مهر</strong></span>
           </div>
-          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill">ثبت‌نام در این دوره</a></div>
+          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill" data-i18n="k196">ثبت‌نام در این دوره</a></div>
         </div>
 
-        <div class="course-card full">
+        <div class="course-card full" data-cat="intermediate">
           <div class="course-top">
-            <span class="course-level">متوسط</span>
-            <h3>Intermediate B1</h3>
-            <p class="desc">مکالمه روان‌تر، گرامر کاربردی و شروع تمرین نوشتار ساده.</p>
+            <span class="course-level" data-i18n="k67">متوسط</span>
+            <h3 data-i18n="k204">Intermediate B1</h3>
+            <p class="desc" data-i18n="k205">مکالمه روان‌تر، گرامر کاربردی و شروع تمرین نوشتار ساده.</p>
           </div>
           <ul class="course-syllabus">
-            <li>زمان‌های کامل و شرطی</li>
-            <li>مکالمه آزاد با موضوعات روز</li>
-            <li>تمرین نوشتاری هفتگی با بازخورد مدرس</li>
+            <li data-i18n="k206">زمان‌های کامل و شرطی</li>
+            <li data-i18n="k207">مکالمه آزاد با موضوعات روز</li>
+            <li data-i18n="k208">تمرین نوشتاری هفتگی با بازخورد مدرس</li>
           </ul>
-          <div class="capacity-label">۸ از ۱۰ ظرفیت پر شده</div>
+          <div class="capacity-label" data-i18n="k209">۸ از ۱۰ ظرفیت پر شده</div>
           <div class="capacity-bar"><span style="width:80%"></span></div>
           <div class="course-meta">
-            <span>مدت: <strong>۱۲ هفته</strong></span>
-            <span>شروع: <strong>۸ مهر</strong></span>
+            <span data-i18n="k210">مدت: <strong>۱۲ هفته</strong></span>
+            <span data-i18n="k211">شروع: <strong>۸ مهر</strong></span>
           </div>
-          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill">ثبت‌نام در این دوره</a></div>
+          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill" data-i18n="k196">ثبت‌نام در این دوره</a></div>
         </div>
 
-        <div class="course-card full">
+        <div class="course-card full" data-cat="intermediate">
           <div class="course-top">
-            <span class="course-level">متوسط</span>
-            <h3>Intermediate B2</h3>
-            <p class="desc">تسلط بر مکالمه روزمره و کاری، آمادگی برای گذر به سطح پیشرفته.</p>
+            <span class="course-level" data-i18n="k67">متوسط</span>
+            <h3 data-i18n="k212">Intermediate B2</h3>
+            <p class="desc" data-i18n="k213">تسلط بر مکالمه روزمره و کاری، آمادگی برای گذر به سطح پیشرفته.</p>
           </div>
           <ul class="course-syllabus">
-            <li>مکالمه در محیط کاری و رسمی</li>
-            <li>گرامر پیشرفته‌تر و اصلاح خطاهای رایج</li>
-            <li>تمرین شنیداری با فایل‌های اصیل انگلیسی</li>
+            <li data-i18n="k214">مکالمه در محیط کاری و رسمی</li>
+            <li data-i18n="k215">گرامر پیشرفته‌تر و اصلاح خطاهای رایج</li>
+            <li data-i18n="k216">تمرین شنیداری با فایل‌های اصیل انگلیسی</li>
           </ul>
-          <div class="capacity-label">۴ از ۱۰ ظرفیت پر شده</div>
+          <div class="capacity-label" data-i18n="k217">۴ از ۱۰ ظرفیت پر شده</div>
           <div class="capacity-bar"><span style="width:40%"></span></div>
           <div class="course-meta">
-            <span>مدت: <strong>۱۲ هفته</strong></span>
-            <span>شروع: <strong>۱۵ مهر</strong></span>
+            <span data-i18n="k210">مدت: <strong>۱۲ هفته</strong></span>
+            <span data-i18n="k218">شروع: <strong>۱۵ مهر</strong></span>
           </div>
-          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill">ثبت‌نام در این دوره</a></div>
+          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill" data-i18n="k196">ثبت‌نام در این دوره</a></div>
         </div>
 
-        <div class="course-card full">
+        <div class="course-card full" data-cat="exam">
           <div class="course-top">
-            <span class="course-level">آمادگی آزمون</span>
-            <h3>IELTS Preparation</h3>
-            <p class="desc">راهبردهای آزمون آیلتس و تمرین چهار مهارت با شبیه‌سازی جلسات آزمون.</p>
+            <span class="course-level" data-i18n="k71">آمادگی آزمون</span>
+            <h3 data-i18n="k219">IELTS Preparation</h3>
+            <p class="desc" data-i18n="k220">راهبردهای آزمون آیلتس و تمرین چهار مهارت با شبیه‌سازی جلسات آزمون.</p>
           </div>
           <ul class="course-syllabus">
-            <li>تکنیک‌های Reading و Listening</li>
-            <li>تمرین Writing Task 1 و 2 با بازخورد</li>
-            <li>جلسه Speaking شبیه‌سازی‌شده</li>
+            <li data-i18n="k221">تکنیک‌های Reading و Listening</li>
+            <li data-i18n="k222">تمرین Writing Task 1 و 2 با بازخورد</li>
+            <li data-i18n="k223">جلسه Speaking شبیه‌سازی‌شده</li>
           </ul>
-          <div class="capacity-label">۵ از ۶ ظرفیت پر شده</div>
+          <div class="capacity-label" data-i18n="k224">۵ از ۶ ظرفیت پر شده</div>
           <div class="capacity-bar"><span style="width:83%"></span></div>
           <div class="course-meta">
-            <span>مدت: <strong>۸ هفته</strong></span>
-            <span>شروع: <strong>۱۰ مهر</strong></span>
+            <span data-i18n="k225">مدت: <strong>۸ هفته</strong></span>
+            <span data-i18n="k226">شروع: <strong>۱۰ مهر</strong></span>
           </div>
-          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill">ثبت‌نام در این دوره</a></div>
+          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill" data-i18n="k196">ثبت‌نام در این دوره</a></div>
         </div>
 
-        <div class="course-card full">
+        <div class="course-card full" data-cat="online">
           <div class="course-top">
-            <span class="course-level">آنلاین</span>
-            <h3>مکالمه آنلاین آزاد</h3>
-            <p class="desc">کلاس آنلاین کوچک برای تمرین مکالمه با محوریت موضوعات روز، بدون نیاز به حضور فیزیکی.</p>
+            <span class="course-level" data-i18n="k187">آنلاین</span>
+            <h3 data-i18n="k227">مکالمه آنلاین آزاد</h3>
+            <p class="desc" data-i18n="k228">کلاس آنلاین کوچک برای تمرین مکالمه با محوریت موضوعات روز، بدون نیاز به حضور فیزیکی.</p>
           </div>
           <ul class="course-syllabus">
-            <li>گروه‌های حداکثر ۵ نفره</li>
-            <li>یک جلسه در هفته، ۶۰ دقیقه</li>
-            <li>مناسب سطح B1 به بالا</li>
+            <li data-i18n="k229">گروه‌های حداکثر ۵ نفره</li>
+            <li data-i18n="k230">یک جلسه در هفته، ۶۰ دقیقه</li>
+            <li data-i18n="k231">مناسب سطح B1 به بالا</li>
           </ul>
-          <div class="capacity-label">۲ از ۵ ظرفیت پر شده</div>
+          <div class="capacity-label" data-i18n="k232">۲ از ۵ ظرفیت پر شده</div>
           <div class="capacity-bar"><span style="width:40%"></span></div>
           <div class="course-meta">
-            <span>مدت: <strong>مستمر</strong></span>
-            <span>شروع: <strong>هر هفته</strong></span>
+            <span data-i18n="k233">مدت: <strong>مستمر</strong></span>
+            <span data-i18n="k234">شروع: <strong>هر هفته</strong></span>
           </div>
-          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill">ثبت‌نام در این دوره</a></div>
+          <div class="course-cta"><a href="contact.html#register" class="btn btn-fill" data-i18n="k196">ثبت‌نام در این دوره</a></div>
         </div>
 
       </div>
+      <p class="empty-note" id="emptyNote" data-i18n="k235">در حال حاضر دوره‌ای در این دسته برگزار نمی‌شود. برای اطلاع از دوره‌های آینده با ما تماس بگیرید.</p>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap">
+      <div class="section-head">
+        <span class="kicker" data-i18n="k236">بر اساس گروه سنی</span>
+        <h2 data-i18n="k237">مدرسان متخصص هر گروه سنی</h2>
+        <p data-i18n="k238">برنامه‌های آموزشی زیر نظر دکتر بهناز پهلوانی، دارای دکتری آموزش زبان انگلیسی و تخصص در طراحی برنامه‌های آموزشی، اجرا می‌شود.</p>
+      </div>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="ic">🧒</div>
+          <h3 data-i18n="k239">کودکان</h3>
+          <p data-i18n="k240">آموزش زبان انگلیسی ویژه کودکان توسط مدرسی که در آموزش این گروه سنی و مدیریت کلاس تخصص دارد.</p>
+          <p class="who"><a href="about.html#zahra-jabari" data-i18n="k57">زهرا جباری</a></p>
+        </div>
+        <div class="value-card">
+          <div class="ic">🎒</div>
+          <h3 data-i18n="k241">خردسالان</h3>
+          <p data-i18n="k242">آموزش کودک‌محور و انگیزه‌بخش برای زبان‌آموزان خردسال، با تکیه بر روش‌های نوین تدریس و مدیریت کلاس.</p>
+          <p class="who"><a href="about.html#samaneh-jooj" data-i18n="k49">سمانه جوج</a> · <a href="about.html#reyhaneh-nikmanesh" data-i18n="k52">ریحانه نیک‌منش</a></p>
+        </div>
+        <div class="value-card">
+          <div class="ic">🎓</div>
+          <h3 data-i18n="k243">نوجوانان</h3>
+          <p data-i18n="k244">کلاس‌های زبان انگلیسی نوجوانان با مدرسانی که در آموزش و انگیزش این گروه سنی تجربه دارند.</p>
+          <p class="who"><a href="about.html#mehrsa-zeinali" data-i18n="k54">مهرسا زینالی</a> · <a href="about.html#samaneh-jooj" data-i18n="k49">سمانه جوج</a> · <a href="about.html#reyhaneh-nikmanesh" data-i18n="k52">ریحانه نیک‌منش</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
       <div class="portal-box">
-        <h2>سطح خودتان را نمی‌دانید؟</h2>
-        <p>در یک آزمون تعیین سطح رایگان و کوتاه شرکت کنید تا مناسب‌ترین دوره به شما پیشنهاد شود.</p>
-        <a href="contact.html#register" class="btn btn-fill">درخواست تعیین سطح رایگان</a>
+        <h2 data-i18n="k245">سطح خودتان را نمی‌دانید؟</h2>
+        <p data-i18n="k246">در یک آزمون تعیین سطح رایگان و کوتاه شرکت کنید تا مناسب‌ترین دوره به شما پیشنهاد شود.</p>
+        <a href="contact.html#register" class="btn btn-fill" data-i18n="k247">درخواست تعیین سطح رایگان</a>
       </div>
     </div>
   </section>
@@ -208,38 +245,39 @@
   <div class="wrap footer-grid">
     <div>
       <div class="footer-brand">
-        <img src="images/vesta-logo.webp" alt="وستا">
-        <strong>وستا</strong>
+        <img src="images/vesta-logo.webp" alt="وستا" data-i18n-attr="alt:k4">
+        <strong data-i18n="k4">وستا</strong>
       </div>
-      <p>آموزشگاه زبان انگلیسی وستا؛ آموزش با کیفیت، اساتید مجرب و منابع آموزشی به‌روز.</p>
+      <p data-i18n="k107">آموزشگاه زبان انگلیسی وستا؛ آموزش با کیفیت، اساتید مجرب و منابع آموزشی به‌روز.</p>
     </div>
     <div>
-      <h4>دسترسی سریع</h4>
+      <h4 data-i18n="k108">دسترسی سریع</h4>
       <ul>
-        <li><a href="courses.html">دوره‌های آموزشی</a></li>
-        <li><a href="tools.html">ابزارهای آموزشی</a></li>
-        <li><a href="about.html">درباره ما</a></li>
+        <li><a href="courses.html" data-i18n="k29">دوره‌های آموزشی</a></li>
+        <li><a href="tools.html" data-i18n="k12">ابزارهای آموزشی</a></li>
+        <li><a href="about.html" data-i18n="k10">درباره ما</a></li>
       </ul>
     </div>
     <div>
-      <h4>حساب کاربری</h4>
+      <h4 data-i18n="k109">حساب کاربری</h4>
       <ul>
-        <li><a href="login.html">ورود زبان‌آموز</a></li>
-        <li><a href="contact.html#register">ثبت‌نام دوره</a></li>
+        <li><a href="login.html" data-i18n="k14">ورود زبان‌آموز</a></li>
+        <li><a href="contact.html#register" data-i18n="k35">ثبت‌نام دوره</a></li>
       </ul>
     </div>
     <div>
-      <h4>ارتباط با ما</h4>
+      <h4 data-i18n="k110">ارتباط با ما</h4>
       <ul>
-        <li><a href="tel:+989193191750">۰۹۱۹-۳۱۹۱۷۵۰</a></li>
+        <li><a href="tel:+989193191750" data-i18n="k111">۰۹۱۹-۳۱۹۱۷۵۰</a></li>
         <li><a href="mailto:info@vesta-institute.com">info@vesta-institute.com</a></li>
-        <li><a href="contact.html">آدرس و نقشه</a></li>
+        <li><a href="contact.html" data-i18n="k112">آدرس و نقشه</a></li>
       </ul>
     </div>
   </div>
-  <div class="copyright">© وستا — آموزشگاه زبان انگلیسی. تمامی حقوق محفوظ است.</div>
+  <div class="copyright" data-i18n="k113">© وستا — آموزشگاه زبان انگلیسی. تمامی حقوق محفوظ است.</div>
 </footer>
 
+<script src="lang.js"></script>
 <script>
   const burger = document.getElementById('burgerBtn');
   const nav = document.getElementById('primaryNav');
@@ -247,10 +285,22 @@
     const isOpen = nav.classList.toggle('open');
     burger.setAttribute('aria-expanded', isOpen);
   });
-  document.querySelectorAll('.filter-chip').forEach(chip=>{
-    chip.addEventListener('click', ()=>{
-      document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+
+  const chips = document.querySelectorAll('.filter-chip');
+  const cards = document.querySelectorAll('.course-card.full');
+  const emptyNote = document.getElementById('emptyNote');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
+      const f = chip.dataset.filter;
+      let shown = 0;
+      cards.forEach(card => {
+        const ok = f === 'all' || card.dataset.cat === f;
+        card.hidden = !ok;
+        if (ok) shown++;
+      });
+      emptyNote.style.display = shown ? 'none' : 'block';
     });
   });
 </script>

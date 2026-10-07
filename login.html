@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ورود زبان‌آموزان به پنل کاربری وستا">
-<title>ورود زبان‌آموز | وستا</title>
+<meta name="description" content="ورود زبان‌آموزان به پنل کاربری وستا" data-i18n-attr="content:k274">
+<title data-i18n="k275">ورود زبان‌آموز | وستا</title>
 <link rel="icon" type="image/webp" href="images/favicon.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,47 +16,53 @@
 <header class="site">
   <div class="wrap nav-row">
     <a class="brand" href="index.html">
-      <img src="images/vesta-logo.webp" alt="نشان آموزشگاه وستا">
+      <img src="images/vesta-logo.webp" alt="نشان آموزشگاه وستا" data-i18n-attr="alt:k2">
       <span class="brand-text">
-        <strong>وستا</strong>
+        <strong data-i18n="k4">وستا</strong>
         <small>ENGLISH LANGUAGE INSTITUTE</small>
       </span>
     </a>
     <nav class="primary" id="primaryNav">
-      <a href="index.html">خانه</a>
-      <a href="about.html">درباره ما</a>
-      <a href="courses.html">دوره‌ها</a>
-      <a href="tools.html">ابزارهای آموزشی</a>
-      <a href="contact.html">تماس با ما</a>
-      <a href="login.html" class="btn btn-line current">ورود زبان‌آموز</a>
+      <a href="index.html" data-i18n="k9">خانه</a>
+      <a href="about.html" data-i18n="k10">درباره ما</a>
+      <a href="courses.html" data-i18n="k11">دوره‌ها</a>
+      <a href="tools.html" data-i18n="k12">ابزارهای آموزشی</a>
+      <a href="contact.html" data-i18n="k13">تماس با ما</a>
+      <a href="login.html" class="btn btn-line current" data-i18n="k14">ورود زبان‌آموز</a>
     </nav>
-    <button class="burger" id="burgerBtn" aria-label="باز کردن منو" aria-expanded="false"><span></span></button>
+    <div class="nav-tools">
+      <div class="lang-switch" role="group" aria-label="Language / زبان">
+        <button type="button" data-lang="fa" lang="fa">فارسی</button>
+        <button type="button" data-lang="en" lang="en">English</button>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="باز کردن منو" aria-expanded="false" data-i18n-attr="aria-label:k3"><span></span></button>
+    </div>
   </div>
 </header>
 
 <main>
   <div class="login-shell">
     <div class="login-card">
-      <img src="images/vesta-logo.webp" alt="وستا">
-      <h2>ورود زبان‌آموز</h2>
-      <p class="sub">برای مشاهده وضعیت دوره و فایل‌های آموزشی وارد شوید</p>
+      <img src="images/vesta-logo.webp" alt="وستا" data-i18n-attr="alt:k4">
+      <h2 data-i18n="k14">ورود زبان‌آموز</h2>
+      <p class="sub" data-i18n="k276">برای مشاهده وضعیت دوره و فایل‌های آموزشی وارد شوید</p>
 
       <form id="loginForm">
         <div class="field">
-          <label for="l-phone">شماره موبایل</label>
+          <label for="l-phone" data-i18n="k277">شماره موبایل</label>
           <input type="tel" id="l-phone" name="phone" placeholder="09xxxxxxxxx" required>
         </div>
         <div class="field">
-          <label for="l-pass">رمز عبور</label>
+          <label for="l-pass" data-i18n="k278">رمز عبور</label>
           <input type="password" id="l-pass" name="password" required>
         </div>
-        <button type="submit" class="btn btn-fill">ورود به پنل</button>
+        <button type="submit" class="btn btn-fill" data-i18n="k279">ورود به پنل</button>
       </form>
 
-      <div class="divider-or">یا</div>
-      <a href="contact.html#register" class="btn btn-line" style="width:100%">هنوز ثبت‌نام نکرده‌ام</a>
+      <div class="divider-or" data-i18n="k280">یا</div>
+      <a href="contact.html#register" class="btn btn-line" style="width:100%" data-i18n="k281">هنوز ثبت‌نام نکرده‌ام</a>
 
-      <p class="login-alt">رمز عبور را فراموش کرده‌اید؟ <a href="contact.html">تماس با پشتیبانی</a></p>
+      <p class="login-alt"><span data-i18n="k282">رمز عبور را فراموش کرده‌اید؟</span> <a href="contact.html" data-i18n="k283">تماس با پشتیبانی</a></p>
     </div>
   </div>
 </main>
@@ -65,38 +71,39 @@
   <div class="wrap footer-grid">
     <div>
       <div class="footer-brand">
-        <img src="images/vesta-logo.webp" alt="وستا">
-        <strong>وستا</strong>
+        <img src="images/vesta-logo.webp" alt="وستا" data-i18n-attr="alt:k4">
+        <strong data-i18n="k4">وستا</strong>
       </div>
-      <p>آموزشگاه زبان انگلیسی وستا؛ آموزش با کیفیت، اساتید مجرب و منابع آموزشی به‌روز.</p>
+      <p data-i18n="k107">آموزشگاه زبان انگلیسی وستا؛ آموزش با کیفیت، اساتید مجرب و منابع آموزشی به‌روز.</p>
     </div>
     <div>
-      <h4>دسترسی سریع</h4>
+      <h4 data-i18n="k108">دسترسی سریع</h4>
       <ul>
-        <li><a href="courses.html">دوره‌های آموزشی</a></li>
-        <li><a href="tools.html">ابزارهای آموزشی</a></li>
-        <li><a href="about.html">درباره ما</a></li>
+        <li><a href="courses.html" data-i18n="k29">دوره‌های آموزشی</a></li>
+        <li><a href="tools.html" data-i18n="k12">ابزارهای آموزشی</a></li>
+        <li><a href="about.html" data-i18n="k10">درباره ما</a></li>
       </ul>
     </div>
     <div>
-      <h4>حساب کاربری</h4>
+      <h4 data-i18n="k109">حساب کاربری</h4>
       <ul>
-        <li><a href="login.html">ورود زبان‌آموز</a></li>
-        <li><a href="contact.html#register">ثبت‌نام دوره</a></li>
+        <li><a href="login.html" data-i18n="k14">ورود زبان‌آموز</a></li>
+        <li><a href="contact.html#register" data-i18n="k35">ثبت‌نام دوره</a></li>
       </ul>
     </div>
     <div>
-      <h4>ارتباط با ما</h4>
+      <h4 data-i18n="k110">ارتباط با ما</h4>
       <ul>
-        <li><a href="tel:+989193191750">۰۹۱۹-۳۱۹۱۷۵۰</a></li>
+        <li><a href="tel:+989193191750" data-i18n="k111">۰۹۱۹-۳۱۹۱۷۵۰</a></li>
         <li><a href="mailto:info@vesta-institute.com">info@vesta-institute.com</a></li>
-        <li><a href="contact.html">آدرس و نقشه</a></li>
+        <li><a href="contact.html" data-i18n="k112">آدرس و نقشه</a></li>
       </ul>
     </div>
   </div>
-  <div class="copyright">© وستا — آموزشگاه زبان انگلیسی. تمامی حقوق محفوظ است.</div>
+  <div class="copyright" data-i18n="k113">© وستا — آموزشگاه زبان انگلیسی. تمامی حقوق محفوظ است.</div>
 </footer>
 
+<script src="lang.js"></script>
 <script>
   const burger = document.getElementById('burgerBtn');
   const nav = document.getElementById('primaryNav');
@@ -104,9 +111,11 @@
     const isOpen = nav.classList.toggle('open');
     burger.setAttribute('aria-expanded', isOpen);
   });
+
   document.getElementById('loginForm').addEventListener('submit', function(e){
     e.preventDefault();
-    alert('پنل زبان‌آموز هنوز راه‌اندازی نشده است. این صفحه فعلاً نمایشی است.');
+    alert(L('پنل زبان‌آموز هنوز راه‌اندازی نشده است. این صفحه فعلاً نمایشی است.',
+            'The student portal has not launched yet. This page is a preview for now.'));
   });
 </script>
 
